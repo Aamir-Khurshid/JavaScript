@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 90px;
+        background-color: rgb(151, 151, 236);
+      }
+      .left {
+        width: 150px;
+        height: 60px;
+      }
+      .left img {
+        width: 150px;
+        height: 60px;
+      }
+      .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #pr,
+      #pri,
+      #re,
+      #au {
+        border: none;
+        margin-left: 10px;
+        background-color: transparent;
+      }
+      .some img {
+        width: 40px;
+        margin-top: 10px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="left">
+        <img src="Dark-logo.png" />
+      </div>
+      <div class="right">
+        <div class="drop">
+          <select id="pr">
+            <option name="ludo">Product</option>
+            <option name="ludo">Ludo</option>
+            <option name="cricket">Cricket</option>
+          </select>
+          <select id="pri">
+            <option name="ludo">Pricing</option>
+            <option name="20">20</option>
+            <option name="25">25</option>
+          </select>
+          <select id="re">
+            <option name="ludo">Resources</option>
+            <option name="20">20</option>
+            <option name="25">25</option>
+          </select>
+          <select id="au">
+            <option name="ludo">About Us</option>
+            <option name="20">20</option>
+            <option name="25">25</option>
+          </select>
+        </div>
+        <div class="some">
+          <img src="lang.png" />
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
