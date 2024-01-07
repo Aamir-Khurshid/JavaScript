@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="child" style="cursor: pointer;">
+        I am a child.
+    </div>
+
+    <script>
+        document.querySelector('.child').addEventListener("click", (e) => {
+            // stopPropagation() is used to stop event bubbling.
+            e.stopPropagation();
+            alert("child was Clicked");
+        });
+
+        function getRandomColor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1},${val2},${val3})`
+        }
+
+        // setInterval()
+        // It repeats the same set of code at every specific amount of time.
+        setInterval(() => {
+            document.querySelector('.child').style.background = getRandomColor()
+        }, 300);
+        // clearInterval is used to remove the interval.
+
+
+        // setTimeout()
+        // It set when will the function occur or executes.
+        setTimeout(() => {
+            document.querySelector('.child').style.background = getRandomColor()
+        }, 3000)
+        // clearTimeout is used to remove the timeout.
+
+    </script>
+</body>
+
+</html>

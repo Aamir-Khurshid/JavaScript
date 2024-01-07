@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!-- Suppose we add same event (For Ex- click) to container , childContainer and child.
+    If we click on child ,
+    then both the parent(childContainer) and grandparent(container) will also be clicked by default .
+    This is known as event bubbling -->
+    <div class="container">
+        <div class="childContainer">
+            <div class="child" style="cursor: pointer;">
+                I am a child.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.container').addEventListener("click", () => {
+            alert("container was Clicked");
+        });
+        document.querySelector('.childContainer').addEventListener("click", () => {
+            alert("childContainer was Clicked");
+        });
+        document.querySelector('.child').addEventListener("click", (e) => {
+            // stopPropagation() is used to stop event bubbling.
+            e.stopPropagation();
+            alert("child was Clicked");
+        });
+    </script>
+</body>
+
+</html>
